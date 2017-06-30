@@ -1,4 +1,4 @@
-package com.genericyzh.rabbitmq.publishsubscribe;
+package com.genericyzh.rabbitmq._1helloworld;
 
 import com.rabbitmq.client.*;
 
@@ -7,10 +7,10 @@ import java.util.concurrent.TimeoutException;
 
 /**
  * @author genericyzh
- * @date 2017/6/30 12:02
+ * @date 2017/6/29 14:55
  */
-public class ReceiveLogs {
-    private static final String EXCHANGE_NAME = "logs";
+public class Recv {
+    private final static String QUEUE_NAME = "hello";
 
     public static void main(String[] args) throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
@@ -18,10 +18,7 @@ public class ReceiveLogs {
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
 
-        channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.FANOUT);
-        String queue = channel.queueDeclare().getQueue(); // 得到一个临时队列
-        channel.queueBind(queue, EXCHANGE_NAME, "");
-
+        channel.queueDeclare(QUEUE_NAME, false, false, false, null);
         System.out.println(" [*] Waiting for messages. To exit press CTRL+C");
 
         Consumer consumer = new DefaultConsumer(channel) {
@@ -31,6 +28,6 @@ public class ReceiveLogs {
                 System.out.println(" [x] Received '" + message + "'");
             }
         };
-        channel.basicConsume(queue, true, consumer);
+        channel.basicConsume(QUEUE_NAME, true, consumer);
     }
 }

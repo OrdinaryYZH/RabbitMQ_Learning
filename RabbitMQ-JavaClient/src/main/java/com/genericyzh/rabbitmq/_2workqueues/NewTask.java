@@ -1,4 +1,4 @@
-package com.genericyzh.rabbitmq.workqueues;
+package com.genericyzh.rabbitmq._2workqueues;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
