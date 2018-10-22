@@ -6,7 +6,7 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
 /**
- * @author 大genericyzh
+ * @author genericyzh
  * @date 2017/6/30 21:12
  */
 public class EmitLogTopic {
