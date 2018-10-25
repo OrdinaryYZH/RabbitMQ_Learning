@@ -1,4 +1,4 @@
-package com.genericyzh.rabbitmq._2workqueues;
+package com.genericyzh.rabbitmq.officialwebsitedemo._2workqueues;
 
 import com.rabbitmq.client.*;
 

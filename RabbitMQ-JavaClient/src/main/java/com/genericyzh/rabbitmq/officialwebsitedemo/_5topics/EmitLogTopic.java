@@ -1,4 +1,4 @@
-package com.genericyzh.rabbitmq._5topics;
+package com.genericyzh.rabbitmq.officialwebsitedemo._5topics;
 
 import com.rabbitmq.client.BuiltinExchangeType;
 import com.rabbitmq.client.Channel;

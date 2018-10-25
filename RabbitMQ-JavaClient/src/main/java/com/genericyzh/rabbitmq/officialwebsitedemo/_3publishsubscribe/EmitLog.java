@@ -1,4 +1,4 @@
-package com.genericyzh.rabbitmq._3publishsubscribe;
+package com.genericyzh.rabbitmq.officialwebsitedemo._3publishsubscribe;
 
 import com.rabbitmq.client.BuiltinExchangeType;
 import com.rabbitmq.client.Channel;

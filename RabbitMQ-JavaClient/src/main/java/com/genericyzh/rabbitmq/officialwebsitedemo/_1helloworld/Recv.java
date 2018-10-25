@@ -1,4 +1,4 @@
-package com.genericyzh.rabbitmq._1helloworld;
+package com.genericyzh.rabbitmq.officialwebsitedemo._1helloworld;
 
 import com.rabbitmq.client.*;
 
