@@ -80,6 +80,8 @@ public class MessagingApplication {
 
     @Bean
     public Jackson2JsonMessageConverter producerJackson2MessageConverter() {
+//        ObjectMapper objectMapper = new ObjectMapper();
+//        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         return new Jackson2JsonMessageConverter();
     }
 
